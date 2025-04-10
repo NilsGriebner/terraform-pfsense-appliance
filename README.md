@@ -7,9 +7,7 @@ Deployment overview:
 
 The Terraform deployment consists of:
 + WAN Network
-+ WAN Router with external RouterIP
 + LAN Network
-+ LAN Router with static default gateway router to the pfSense firewall
 + pfSense firewall VM + disk volume
 + FloatingIP for firewall VM
 + deactivating port security on firewall ports
@@ -18,7 +16,7 @@ The Terraform deployment consists of:
 **Requirements:**
 + Terraform installed
 + Access to a STACKIT project
-+ UAT (OpenStack) credentials
++ STACKIT Service-Account-Token
 
 ### Installation
 1. Clone Repo

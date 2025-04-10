@@ -1,6 +1,6 @@
 /*
 Copyright 2023 Schwarz IT KG <markus.brunsch@mail.schwarz>
-Copyright 2024 STACKIT GmbH & Co. KG <markus.brunsch@stackit.cloud>
+Copyright 2024-2025 STACKIT GmbH & Co. KG <markus.brunsch@stackit.cloud>
 
 Use of this source code is governed by an MIT-style
 license that can be found in the LICENSE file or at
@@ -11,47 +11,40 @@ https://opensource.org/licenses/MIT.
 # Custom User Settings
 #
 
-# OpenStack Availability Zone
+# STACKIT Availability Zone
 variable "zone" {
   type        = string
   description = ""
   default     = "eu01-m"
 }
 
-# OpenStack VM Flavor
+# STACKIT VM Flavor
 variable "flavor" {
   type        = string
   description = ""
   default     = "c1.2"
 }
 
-# Local VPC Subnet to create OpenStack Network
+# Local VPC Subnet to create Network
 variable "LOCAL_SUBNET" {
   type        = string
   description = ""
-  default     = "10.0.0.0/24"
+  default     = "10.10.0.0/24"
+}
+variable "LOCAL_FIREWALL_IP" {
+  type        = string
+  description = ""
+  default     = "10.10.0.220"
 }
 
-############################################
-
-#
-# System Settings (do not edit)
-#
-
-# OpenStack UAT Username
-variable "USERNAME" {
+# STACKIT ProjectID
+variable "STACKIT_PROJECT_ID" {
   type        = string
   description = ""
 }
 
-# OpenStack Project ID
-variable "TENANTID" {
-  type        = string
-  description = ""
-}
-
-# OpenStack UAT Password
-variable "PASSWORD" {
+# STACKIT Service Account Token
+variable "STACKIT_SERVICE_ACCOUNT_TOKEN" {
   type        = string
   description = ""
 }
