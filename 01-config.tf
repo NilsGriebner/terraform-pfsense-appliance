@@ -40,11 +40,6 @@ variable "LOCAL_FIREWALL_IP" {
 # STACKIT ProjectID
 variable "STACKIT_PROJECT_ID" {
   type        = string
-  description = ""
-}
-
-# STACKIT Service Account Token
-variable "STACKIT_SERVICE_ACCOUNT_TOKEN" {
-  type        = string
-  description = ""
+  description = "STACKIT Project ID"
+  default     = ""
 }
