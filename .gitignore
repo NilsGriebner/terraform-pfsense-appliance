@@ -36,3 +36,4 @@ terraform.rc
 .terraform.lock.hcl
 conf.img
 pfsense.qcow2
+secrets.json
