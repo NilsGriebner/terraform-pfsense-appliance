@@ -13,13 +13,13 @@ terraform {
   required_providers {
     stackit = {
       source  = "stackitcloud/stackit"
-      version = "0.58.2"
+      version = "0.59.0"
     }
   }
 }
 
 provider "stackit" {
-  default_region        = "eu01"
-  service_account_token = var.STACKIT_SERVICE_ACCOUNT_TOKEN
-  enable_beta_resources = true
+  default_region           = "eu01"
+  service_account_key_path = "secrets.json"
+  enable_beta_resources    = true
 }

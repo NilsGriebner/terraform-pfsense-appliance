@@ -16,11 +16,12 @@ The Terraform deployment consists of:
 **Requirements:**
 + Terraform installed
 + Access to a STACKIT project
-+ STACKIT Service-Account-Token
++ STACKIT Service Account Key
 
 ### Installation
 1. Clone Repo
-1. Setup enviroment (.env) variables
+1. Set Project ID in `01-config.tf`
+1. Create & Save a STACKIT Service Account Token and place it in the `secrets.json` file.
 1. Run Terraform `terraform apply`
 
 ## Default Configuration
@@ -31,9 +32,6 @@ The Terraform deployment consists of:
 
 ### NAT
 Masqurade (Outbound NAT) Traffic from `LAN` to `WAN`
-
-### DNS
-Disable build in unbound DNS resolver and forward all DNS queries to public DNS Servers OpenDNS & Quad9
 
 ### Dashboard
 Customized Widgets and CSS settings
