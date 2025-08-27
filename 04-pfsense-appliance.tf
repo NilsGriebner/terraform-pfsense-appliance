@@ -9,12 +9,12 @@ https://opensource.org/licenses/MIT.
 
 resource "stackit_volume" "pfsense_vol" {
   project_id        = var.STACKIT_PROJECT_ID
-  name              = "pfsense-2.7.2-root"
+  name              = "opnsense-25.7-root"
   availability_zone = var.zone
   size              = 16
   performance_class = "storage_premium_perf4"
   source = {
-    id   = stackit_image.pfsense_image.image_id
+    id   = stackit_image.opnsense_image.image_id
     type = "image"
   }
 }
